@@ -1,3 +1,5 @@
-# Code
+# Add welcome note from IEEE-SBM etc here ...... 
 
-https://github.com/pskalbhav1/Code/wiki
+....
+
+Link : https://github.com/pskalbhav1/Code-IEEESBM/wiki/Introduction-to-Competitive-Programming
