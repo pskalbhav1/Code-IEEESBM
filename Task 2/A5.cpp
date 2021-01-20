@@ -8,8 +8,11 @@ using namespace std;
 int main()
 {
     string door="."; int rail; char hand;
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
     cin>>door;
     cin>>rail;
+    
     if(door.compare("front")==0)
     {
         if(rail==1)

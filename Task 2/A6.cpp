@@ -5,35 +5,35 @@
 #include<bits/stdc++.h>
 #include<string>
 using namespace std;
-int finder(vector<int> numbers,int n,int se)
-{
-
-    for(int i=0;i<n;i++)
-    {
-        if(numbers[i]==se)
-            return i;
-    }
-    return -1;
-}
 int main()
 {
-    int n; int i1=-1,i2=-1;
+    int n; int count=0;
     cout<<"size of array\n>";
     cin>>n;
     vector<long> numbers(n);
     cout<<"members of array\n>";
     for(int i=0;i<n;i++)
-        cin>>numbers[i];
-    for(int i=0;i<n;i++)
     {
-        std::vector<int>::iterator it; 
+        cin>>numbers[i];
+        if(i==numbers[i])
+            count++;
+    }
+    if(count==n)
+    {
+        cout<<count;
+        return 0;
+    }
+    //cout<<finder(numbers,n,2);
+    for(int i=0;i<n;i++)
+    { 
         if(i==numbers[i])
             continue;
-        else
+        if(numbers[numbers[i]]==i)
         {
-            i1=finder(numbers,n,numbers[i])
-            
+            cout<<count+2;
+            return 0;
         }
-        
     }
+    cout<<count+1;
+    return 0;
 }
