@@ -1,10 +1,17 @@
-int num, i, a, m=0, n=1;
-    cout<<"enter number of terms to be represented: ";
-    cin>>num;
-    cout<<Fibonacci sequence: ";
-    for(i=0; i<num; i++){
-            cin>> m;
-        a=m+n;
-        m=n;
-        n=a;
-    }
+#include <iostream>  
+using namespace std;  
+
+int main() {  
+  int n1=0,n2=1,n3,i,number;    
+ cout<<"Enter the number of elements to be output: ";    
+ cin>>number;    
+ cout<<n1<<" "<<n2<<" "; 
+ for(i=2;i<number;++i) 
+ {    
+  n3=n1+n2;    
+  cout<<n3<<" ";    
+  n1=n2;    
+  n2=n3;    
+ }    
+   return 0;  
+   }  
