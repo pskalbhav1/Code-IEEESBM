@@ -1,19 +1,17 @@
-#include <iostream>  
-using namespace std;  
+#include <iostream>
+using namespace std;
 
 int main()
 {
-   int num1, num2, sum;
-   cin>>num1;
-   cin>>num2;
-   sum = num1 + num2;
-   cout<<sum;
-   if(sum%2 != 0){
-    cout<<"\nThe sum is odd";
-   }
-    else{
-        cout<<"\nThe sum is even";
-    }
+    int n;
 
-   return 0;
+    cout << "Enter an integer: ";
+    cin >> n;
+
+    if ( n % 2 == 0)
+        cout << n << " is even.";
+    else
+        cout << n << " is odd.";
+
+    return 0;
 }
