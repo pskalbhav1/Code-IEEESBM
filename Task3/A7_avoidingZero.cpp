@@ -1,45 +1,49 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int main(){
+#define int long long int
+
+int32_t main()
+{
     int T;
-    cin>>T;
+    cin >> T;
     while (T--)
     {
-        int a;
-        cin>>a;
-        vector<int> A(a);
+        int n;
+        cin >> n;
         int sum = 0;
-        for (int i = 0; i < a; i++)
+        vector<int> v;
+        for (int i = 0; i < n; i++)
         {
-            cin>>A[i];
-            sum += A[i];
+            int k;
+            cin >> k;
+            v.push_back(k);
+
+            sum += v[i];
         }
         if (sum == 0)
         {
-            cout<<"NO"<<endl;
+            cout << "NO" << endl;
         }
         else
         {
-            cout<<"Yes"<<endl;
-            if (sum< 0)
+            cout << "YES" << endl;
+            if (sum > 0)
             {
-                sort(A.begin(),A.end(),greater<int>());
-                for(auto x: A)
-            cout<<x<<" ";
-        cout<<endl;
+                sort(v.begin(), v.end(), greater<int>());
             }
-            else{
-
-                sort(A.begin(),A.end());
-                for(auto x: A)
-            cout<<x<<" ";
-        cout<<endl;
+            else
+            {
+                sort(v.begin(), v.end());
             }
-            
+            for (int i = 0; i < v.size(); i++)
+            {
+                cout << v[i] << " ";
+            }
+            cout << endl;
         }
     }
-    
+
     return 0;
 }
