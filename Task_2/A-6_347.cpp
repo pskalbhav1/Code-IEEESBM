@@ -5,24 +5,21 @@
 #include <cmath>
 #include <vector>
 using namespace std;
-
+ 
 void swap(int *a,int *b);
 int count(int arr[],int num);
 int main(){
-    int arr[100],i,n,cnt=0,index[100],j=0,cnt2=0,temp[100];
+    int arr[100000],i,n,cnt=0,index[100000],j=0,cnt2=0,temp[100000];
     cin >> n;
     for (i=0;i<n;i++){
         cin >> arr[i];
     }
     cnt=count(arr,n);
-    cout << cnt << endl;
     for (i=0;i<n;i++){
         if (arr[i]!=i){
             index[j++]=i;
         }
     }
-    for (i=0;i<j;i++)
-        cout << index[i] << endl;
     for (i=0;i<j;i++){
         for (int k=0;k<n;k++){
             copy(begin(arr),end(arr),temp);

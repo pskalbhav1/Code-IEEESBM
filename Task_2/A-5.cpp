@@ -8,17 +8,19 @@ using namespace std;
 
 
 int main(){
-    int rail,i;
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+    int rail;
     string side;
     cin >> side;
     cin >> rail;
-    if (side=="front"){
+    if (side=="front" || side=="Front"){
         if (rail==1)
         cout << "L";
         else if (rail==2)
         cout << "R";
     }
-    else if (side=="left"){
+    else if (side=="back" || side=="Back"){
         if (rail==1)
         cout << "R";
         else if (rail==2)

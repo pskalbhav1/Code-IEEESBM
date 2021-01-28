@@ -14,7 +14,10 @@ int main(){
         sum+=cost*(i+1);
     }
     diff=sum-inmoney;
-    cout << diff;
+    if (diff>0)
+    	cout << diff;
+    else 
+    	cout << "0";
     return 0;
 }
     
