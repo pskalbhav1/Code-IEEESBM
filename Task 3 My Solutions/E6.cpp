@@ -87,7 +87,7 @@ void binarysearch(int ar[], int length, int n)
     else cout<<"Element Not Found";
 }
 int main()
-{                         //Here an error is being marked... a function-definition is not allowed here before '{' token
+{
     int l, n, choice;
     cout<<"Enter size of array : ";
     cin>>l;
