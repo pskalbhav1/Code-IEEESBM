@@ -1,22 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-
+#include<stdio.h>
 int main()
 {
-   int num=0;
-   printf("Enter a number\n");
-   scanf("%d",&num);
-   if(num%2==0)
-   printf("even");
-   else
-   printf("odd");
-   return 0;
+  	int i, number;
+printf("\n Please Enter the Maximum Limit Value : ");
+  	scanf("%d", &number);
 
+  	printf("\n Even Numbers between 1 and %d are : \n", number);
+  	for(i = 1; i <= number; i++)
+  	{
+    	if ( i % 2 == 0 )
+    	{
+  			printf(" %d\t", i);
+    	}
+  	}
 
-
-
-
-
-
-
+  	return 0;
 }
+
