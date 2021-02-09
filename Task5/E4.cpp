@@ -1,28 +1,29 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
+int find_char_in_string(char c, string s, int start_pos=0)
+    {
+        for(int i=start_pos;i<s.length();i++)
+            if(s[i]==c)
+                {
+                    return i;
+                }
+        return -1;
+    }
 int main()
     {
         string primary,search="hello";
         cin>>primary;
-        int i=0,flag=0,j=0;
+        int j=0,last_found_pos=-1;
         for(j=0;search[j]!='\0';j++)
             {
-                flag=0;
-                for(i=0;i<primary.length();i++)
+                last_found_pos=(find_char_in_string(search[j],primary,last_found_pos+1));
+                if(last_found_pos==-1)
                     {
-                        if(primary[i]==search[j])
-                            {
-                                flag=1;
-                                primary=primary.substr(i+1,primary.length()-(i+1));
-                                break;
-                            }
-
+                        break;
                     }
-                if(!flag)
-                    break;
             }
-        if(!flag)
+        if(last_found_pos==-1)
             cout<<"NO";
         else
             cout<<"YES";
