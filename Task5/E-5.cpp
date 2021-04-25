@@ -1,0 +1,17 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s, t;
+    cin >> s >> t;
+    reverse(s.begin(), s.end());
+    if (s == t)
+    {
+        cout << "Yes\n";
+    }
+    else
+    {
+        cout << "No\n";
+    }
+}
